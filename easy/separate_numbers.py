@@ -1,12 +1,11 @@
 # https://www.hackerrank.com/challenges/separate-the-numbers/problem
 def solve(s):
-    for k in range(len(s) // 2):
-        first = cur = s[0:k+1]
-        j = k+1
+    for i in range(len(s) // 2):
+        first = cur = s[:i+1]
+        j = i+1
         found = True
         while j < len(s):
             cur = str(int(cur) + 1)
-            # print(str(int(cur) - 1), cur, s[j:j+len(cur)])
             if cur != s[j:j+len(cur)]:
                 found = False
                 break
